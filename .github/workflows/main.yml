@@ -22,7 +22,7 @@ jobs:
       ENV: devs
       DBUSER: postgres@jseijas-dbsrv.postgres.database.azure.com
       DBPASS: Pa$$w0rd1990
-      DBHOST: jseijas-dbsrv.postgres.database.azure.com
+      DBHOST: jseijas-dbsrv
       DBNAME: jrubiales-assignment-dev-db
     steps:
     - uses: actions/checkout@v3
