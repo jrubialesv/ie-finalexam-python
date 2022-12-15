@@ -14,3 +14,17 @@ def testing_client(scope='module'):
         yield testing_client
 
     db.drop_all()
+
+    # Modify the existing fixture so that it is executed for every test case 
+
+@pytest.fixture
+def testing_client(scope='function'):
+    db.create_all()
+    account = Account('Test Account', '€')
+    db.session.add(account)
+    db.session.commit()
+
+    with app.test_client() as testing_client:
+        yield testing_client
+
+    db.drop_all()

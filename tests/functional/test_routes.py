@@ -30,3 +30,13 @@ def test_create_account(testing_client):
     assert response.status_code == 200
 
 
+# Implement a test that validates that when sending a put request to /accounts/<id>, the response contains the right name
+
+def test_update_account(testing_client):
+    """
+    GIVEN a Flask application
+    WHEN the '/accounts/<id>' page is posted to (PUT)
+    THEN check the response is valid
+    """
+    response = testing_client.put('/accounts/1', json={'name': 'John Doe', 'currency': '€'})
+    assert response.status_code == 200
