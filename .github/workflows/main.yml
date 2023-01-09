@@ -6,8 +6,8 @@ name: final exam
 on:
   push:
     branches: [ dev ]
-  schedule:
-    - cron: '0 23 * * *'
+#   schedule:
+#     - cron: '0 23 * * *'
 
 #     Running a python linter
 #     Executing the pytest test battery (using SQLite as database) and pytest coverage.
